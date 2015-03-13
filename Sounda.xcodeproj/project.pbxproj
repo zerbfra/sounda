@@ -13,6 +13,9 @@
 		135F429A1AB2616800100DB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135F42991AB2616800100DB3 /* Images.xcassets */; };
 		135F429D1AB2616800100DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135F429B1AB2616800100DB3 /* Main.storyboard */; };
 		135F42A91AB2616800100DB3 /* SoundaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 135F42A81AB2616800100DB3 /* SoundaTests.m */; };
+		135F42B31AB2619500100DB3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135F42B21AB2619500100DB3 /* CoreAudio.framework */; };
+		135F42B51AB2619B00100DB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135F42B41AB2619B00100DB3 /* Cocoa.framework */; };
+		135F42B81AB2626900100DB3 /* AudioDeviceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 135F42B71AB2626900100DB3 /* AudioDeviceList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,10 @@
 		135F42A21AB2616800100DB3 /* SoundaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		135F42A71AB2616800100DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		135F42A81AB2616800100DB3 /* SoundaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundaTests.m; sourceTree = "<group>"; };
+		135F42B21AB2619500100DB3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		135F42B41AB2619B00100DB3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		135F42B61AB2626900100DB3 /* AudioDeviceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceList.h; sourceTree = "<group>"; };
+		135F42B71AB2626900100DB3 /* AudioDeviceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDeviceList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135F42B51AB2619B00100DB3 /* Cocoa.framework in Frameworks */,
+				135F42B31AB2619500100DB3 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,7 @@
 				135F42921AB2616800100DB3 /* AppDelegate.m */,
 				135F42961AB2616800100DB3 /* ViewController.h */,
 				135F42971AB2616800100DB3 /* ViewController.m */,
+				135F42B91AB2627100100DB3 /* Classes */,
 				135F42991AB2616800100DB3 /* Images.xcassets */,
 				135F429B1AB2616800100DB3 /* Main.storyboard */,
 				135F428F1AB2616800100DB3 /* Supporting Files */,
@@ -93,6 +103,8 @@
 		135F428F1AB2616800100DB3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				135F42B41AB2619B00100DB3 /* Cocoa.framework */,
+				135F42B21AB2619500100DB3 /* CoreAudio.framework */,
 				135F42901AB2616800100DB3 /* Info.plist */,
 				135F42941AB2616800100DB3 /* main.m */,
 			);
@@ -114,6 +126,15 @@
 				135F42A71AB2616800100DB3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		135F42B91AB2627100100DB3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				135F42B61AB2626900100DB3 /* AudioDeviceList.h */,
+				135F42B71AB2626900100DB3 /* AudioDeviceList.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +186,7 @@
 				TargetAttributes = {
 					135F428B1AB2616800100DB3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 9AXZE37QMU;
 					};
 					135F42A11AB2616800100DB3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -217,6 +239,7 @@
 			files = (
 				135F42981AB2616800100DB3 /* ViewController.m in Sources */,
 				135F42951AB2616800100DB3 /* main.m in Sources */,
+				135F42B81AB2626900100DB3 /* AudioDeviceList.m in Sources */,
 				135F42931AB2616800100DB3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
