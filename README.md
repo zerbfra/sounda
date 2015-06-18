@@ -1,5 +1,6 @@
 # Sounda
-I was struggling to find a sound bord for mac, and I didn't find anything simple or cheap on the Mac App Store.
+I was struggling to find a sound board for mac, and I didn't find anything simple or cheap on the Mac App Store.
+
 I came up with this simple software for mac, written in a couple of hours of a rainy night.
 
 Any of the button can be associated to one sound. 
