@@ -10,7 +10,7 @@ I came up with this simple software for mac, written in a couple of hours of a r
 Any of the button can be associated to one sound. 
 By pressing each button you will play the sound through the selected audio device.
 
-_The "AudioDeviceList" class was probably originally written by Apple, but not sure. If you find out that it's yours, please write me and I will add the copyrights ;) I don't even remember if I modified something or not._
+_The "AudioDeviceList" class was probably originally written by Apple, but I'm not sure. If you find out that it's yours, please write me and I will add the copyrights ;) I don't even remember if I modified something or not._
 
 The Sounda icon is based on the design of Alessandro Suraci, available at [NounProject](https://thenounproject.com/term/sound-wave/6000/)
 
