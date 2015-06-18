@@ -1,4 +1,8 @@
-# Sounda
+# Sounda - Simple SoundBoard for Mac
+
+![Sounda](Sounda/Images.xcassets/AppIcon.appiconset/sounda128.png)
+
+
 I was struggling to find a sound board for mac, and I didn't find anything simple or cheap on the Mac App Store.
 
 I came up with this simple software for mac, written in a couple of hours of a rainy night.
