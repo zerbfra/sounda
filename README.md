@@ -5,10 +5,10 @@
 
 I was struggling to find a sound board for mac, and I didn't find anything simple or cheap on the Mac App Store.
 
-I came up with this simple software for mac, written in a couple of hours of a rainy night.
+I came up with this simple software for mac, written in a couple of hours in a rainy night.
 
-Any of the button can be associated to one sound. 
-By pressing each button you will play the sound through the selected audio device.
+* Any of the button can be associated to one sound. 
+* By pressing each button you will play the sound through the selected audio device.
 
 _The "AudioDeviceList" class was probably originally written by Apple, but I'm not sure. If you find out that it's yours, please write me and I will add the copyrights ;) I don't even remember if I modified something or not._
 
