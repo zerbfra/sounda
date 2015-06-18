@@ -15,6 +15,7 @@
 
     // Do any additional setup after loading the view.
     
+    // initialize the dictionary for audio files
     self.audioFiles = [NSMutableDictionary dictionary];
     
     [[AudioDeviceList shared] buildAudioDevicesList:self.audioDeviceSelector];
@@ -28,49 +29,55 @@
 }
 
 
+/* Given a sound, play it on the selected device */
 -(void) playSoundUrl:(NSURL*) url {
     
-    if([self.snd isPlaying]) {
-        [self.snd stop];
-    }
+    // if already playing, stop it
+    [self stopSounds:nil];
     
+    // allocate the sound
     self.snd = [[NSSound alloc] initWithContentsOfURL:url byReference:NO];
     
     
     NSArray *data = [[[self audioDeviceSelector] selectedItem] representedObject];
     
+    // send the sound to the selected device
     [self.snd setPlaybackDeviceIdentifier:[data objectAtIndex:0]];
     
     NSLog(@"channels mapped to device: %@", [self.snd playbackDeviceIdentifier]);
     
+    // play it!
     [self.snd play];
     
 }
 
-
+/* Open a dialog to select the file to play */
 - (NSURL*)getAudioFileFromDialog {
     
-    NSInteger result;
     NSOpenPanel *oPanel = [NSOpenPanel openPanel];
-    NSArray *filesToOpen;
-    NSURL *theNewFilePath;
-    NSMutableArray *fileTypes = [NSMutableArray arrayWithArray:[NSSound soundUnfilteredTypes]];
-    
+
     [oPanel setAllowsMultipleSelection:NO];
     [oPanel setDirectoryURL:[NSURL URLWithString:NSHomeDirectory()]];
+    
+    // only sound files
+    NSMutableArray *fileTypes = [NSMutableArray arrayWithArray:[NSSound soundUnfilteredTypes]];
     oPanel.allowedFileTypes = fileTypes;
     
-    result = [oPanel runModal];
+    // run
+    [oPanel runModal];
     
-    filesToOpen = [oPanel URLs];
-    theNewFilePath = [filesToOpen objectAtIndex:0];
-    NSLog(@"Sound file is now: %@", theNewFilePath);
+    // the new file
+    NSURL *selectedFile = [[oPanel URLs] objectAtIndex:0];
     
-    return theNewFilePath;
+    // the new selected file is returned
+    NSLog(@"Sound file is now: %@", selectedFile);
+    
+    return selectedFile;
 }
 
 
 - (IBAction)stopSounds:(id)sender {
+    // check if playing, stop if necessary
     if([self.snd isPlaying]) {
         [self.snd stop];
     }
@@ -78,24 +85,24 @@
 
 - (IBAction)audioButtonPressed:(id)sender {
     
+    // get the sender (button)
     NSButton *button = (NSButton*) sender;
     
-    NSLog(@"%@",button.identifier);
-    
+    // if a file is NOT loaded "on the button"
     if([self.audioFiles objectForKey:(NSString*)button.identifier] == nil) {
         
-        NSLog(@"%@ -- %@",[self.audioFiles objectForKey:button.identifier],button.identifier);
-        
+        // retrieve the file
         NSURL *fileForButton = [self getAudioFileFromDialog];
         
+        // fill the dictionary with the selected audio file
         [self.audioFiles setObject:fileForButton forKey:button.identifier];
+        
+        // update the button text with the name of the file
         NSString* theFileName = [[fileForButton lastPathComponent] stringByDeletingPathExtension];
         button.title = theFileName;
-        
-        //NSLog(@"%@",self.audioFiles);
-        
-        //[self playSoundUrl:fileForButton];
+
     } else {
+        // if the file is already loaded, simply play it
         [self playSoundUrl:[self.audioFiles objectForKey:button.identifier]];
     }
     

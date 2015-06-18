@@ -11,15 +11,20 @@
 
 @interface ViewController : NSViewController
 
+// selector for the audio device
 @property (weak) IBOutlet NSPopUpButton *audioDeviceSelector;
 
+// the NSSound used to play sounds
 @property (strong,nonatomic) NSSound *snd;
 
+// dictionary of all sounds loaded
 @property (strong,nonatomic) NSMutableDictionary *audioFiles;
 
 
-
+// button that stop sounds
 - (IBAction)stopSounds:(id)sender;
+
+// when one of the "audio" button is pressed
 - (IBAction)audioButtonPressed:(id)sender;
 
 @end
