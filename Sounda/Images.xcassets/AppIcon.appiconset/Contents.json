@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "Untitled-4.png",
+      "filename" : "sounda16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "Untitled-3.png",
+      "filename" : "sounda32-1.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "Untitled-2.png",
+      "filename" : "sounda32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "Untitled@2x-2.png",
+      "filename" : "sounda64.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "Untitled-1.png",
+      "filename" : "sounda128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "Untitled@2x-1.png",
+      "filename" : "sounda256-1.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "Untitled.png",
+      "filename" : "sounda256.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "Untitled@2x.png",
+      "filename" : "sounda512-1.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "noun_28927_cc.png",
+      "filename" : "sounda512.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "noun_28927_cc@2x.png",
+      "filename" : "sounda.png",
       "scale" : "2x"
     }
   ],
